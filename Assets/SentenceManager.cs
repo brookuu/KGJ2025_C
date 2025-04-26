@@ -7,11 +7,18 @@ public class SentenceManager : MonoBehaviour
     public InputField inputField;
     public GameObject[] sentencePrefab;
     public Transform sentenceArea;
-    public float speakTime;
+    public float spacing = 20f; // 每個句子之間固定的小間距（比如20）
+
     public GameObject playerBulletPrefab;
-    public Transform bulletArea; // 建議是 Canvas 下的空物件
+    public Transform bulletArea;
+    public float speakTime;
 
     private List<Sentence> activeSentences = new List<Sentence>();
+
+    void Start()
+    {
+        InvokeRepeating(nameof(SpawnSentence), 1f, speakTime);
+    }
 
     void Update()
     {
@@ -22,41 +29,24 @@ public class SentenceManager : MonoBehaviour
         }
     }
 
-    void Start()
+    void ShootBullet(string text)
     {
-        InvokeRepeating("SpawnSentence", 1f, speakTime);
-    }
-
- 
-
-    void CheckInput(string input)
-    {
-        foreach (Sentence sentence in activeSentences)
-        {
-            if (!sentence.IsTyping() && input == sentence.GetFullText())
-            {
-                sentence.DestroySentence();
-                activeSentences.Remove(sentence);
-                break;
-            }
-        }
+        GameObject obj = Instantiate(playerBulletPrefab, bulletArea);
+        obj.transform.localPosition = new Vector3(0f, -150f, 0f);
+        PlayerBullet bullet = obj.GetComponent<PlayerBullet>();
+        bullet.SetText(text);
     }
 
     public void GameOver()
     {
         Debug.Log("遊戲失敗：句子到底了！");
     }
-    void ShootBullet(string text)
-    {
-        GameObject obj = Instantiate(playerBulletPrefab, bulletArea);
-        obj.transform.localPosition = new Vector3(0f, -250f, 0f); // 玩家發射位置（可調整）
-        PlayerBullet bullet = obj.GetComponent<PlayerBullet>();
-        bullet.SetText(text);
-    }
+
     public List<Sentence> GetActiveSentences()
     {
         return activeSentences;
     }
+
     public void RemoveSentence(Sentence sentence)
     {
         if (activeSentences.Contains(sentence))
@@ -67,18 +57,26 @@ public class SentenceManager : MonoBehaviour
 
     public void SpawnSentence()
     {
-        // 讓所有現有句子往下移
-        foreach (Sentence s in activeSentences)
-        {
-            s.MoveDown(60f); // 每句往下 60 單位，可依照句子高度調整
-        }
-
-        // 新句子出現在最上面
+        // 生成新句子
         GameObject obj = Instantiate(sentencePrefab[Random.Range(0, sentencePrefab.Length)], sentenceArea);
-        obj.transform.localPosition = new Vector3(0f, 0f, 0f); // 顯示在最上方
         Sentence sentence = obj.GetComponent<Sentence>();
         sentence.SetSentence();
-        activeSentences.Insert(0, sentence); // 加到最前面
+        activeSentences.Insert(0, sentence);
+
+        // 排列位置
+        float currentY = 0f;
+        for (int i = 0; i < activeSentences.Count; i++)
+        {
+            RectTransform rt = activeSentences[i].GetComponent<RectTransform>();
+
+            // 先強制更新Layout，避免剛生成preferredHeight拿到0
+            LayoutRebuilder.ForceRebuildLayoutImmediate(rt);
+
+            float height = rt.sizeDelta.y;
+            activeSentences[i].transform.localPosition = new Vector3(0f, currentY, 0f);
+
+            currentY -= height + spacing; // 下一個往下
+        }
     }
 
 }

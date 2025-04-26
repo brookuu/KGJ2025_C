@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 369086763358173419}
   - component: {fileID: 3474497643114566671}
   m_Layer: 5
-  m_Name: Sentence 2
+  m_Name: Sentence 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,8 +80,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u4F60\u624D\u4E0D\u662F\u4EC0\u9EBC\u5C0F\u4E11 \u4F60\u6839\u672C\u5C31\u662F\u4E00\u6574\u500B\u99AC\u6232\u5718
-    \u800C\u6211\u5011\u5247\u662F\u628A\u4F60\u6551\u51FA\u4F86\u7684\u5049\u4EBA"
+  m_Text: "\u4F60\u5011\u6240\u505A\u7684\u4E00\u5207 \u4E0D\u904E\u662F\u5728\u6211\u7684\u638C\u5FC3\u4E2D\u8DF3\u821E\u800C\u5DF2"
 --- !u!114 &3474497643114566671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,7 +94,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 369086763358173419}
-  fullText: "\u4F60\u624D\u4E0D\u662F\u4EC0\u9EBC\u5C0F\u4E11 \u4F60\u6839\u672C\u5C31\u662F\u4E00\u6574\u500B\u99AC\u6232\u5718
-    \u800C\u6211\u5011\u5247\u662F\u628A\u4F60\u6551\u51FA\u4F86\u7684\u5049\u4EBA"
+  fullText: "\u4F60\u5011\u6240\u505A\u7684\u4E00\u5207 \u4E0D\u904E\u662F\u5728\u6211\u7684\u638C\u5FC3\u4E2D\u8DF3\u821E\u800C\u5DF2"
   destroyKeywords:
-  - "\u6BCF\u500B\u4EBA\u90FD\u6709\u5404\u81EA\u7684\u5C08\u696D\u9818\u57DF"
+  - "\u4F60\u8AAA\u4EC0\u9EBC?"
+  maxFallSpeed: 20
+  minFallSpeed: 10
+  maxScale: 2.5
+  minScale: 0.1
+  appearDuration: 1
+  initialY: 0
