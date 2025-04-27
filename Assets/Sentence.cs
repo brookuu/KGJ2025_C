@@ -85,8 +85,13 @@ public class Sentence : MonoBehaviour
 
     public void DestroySentence()
     {
+        // 加上爆炸效果
+        SpecialEffectsHelper.Instance.Explosion(transform.position);
+
+        // 然後銷毀句子
         Destroy(gameObject);
     }
+
 
     public void MoveDown(float distance)
     {

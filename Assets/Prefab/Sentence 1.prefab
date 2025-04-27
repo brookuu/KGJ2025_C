@@ -99,3 +99,10 @@ MonoBehaviour:
     \n\u60F3\u8981\u8B93\u9019\u4E00\u5207\u6D88\u5931 \u5C31\u52A0\u5165\u6211\u5011\u5427"
   destroyKeywords:
   - "\u9084\u771F\u662F\u9AD8\u9AD8\u5728\u4E0A\u5462"
+  maxFallSpeed: 20
+  minFallSpeed: 10
+  maxScale: 2.5
+  minScale: 0.1
+  appearDuration: 1
+  initialY: 0
+  explosionEffectPrefab: {fileID: 7048261812161446345, guid: e0d70134580ebe04987685ae5d7787f7, type: 3}

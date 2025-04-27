@@ -98,10 +98,11 @@ MonoBehaviour:
   fullText: "\u4F60\u77E5\u9053\u73FE\u5728\u4E00\u689D\u9EB5\u5305\u591A\u5C11\u9322\u55CE
     50\u842C\u99AC\u514B \u8DDF\u6211\u4F86 \u6211\u8B93\u4F60\u4E0D\u7528\u70BA\u6B64\u7169\u60F1"
   destroyKeywords:
-  - "\u4F46\u6211\u4E0D\u5403\u9EB5\u5305"
+  - "\u6211\u4E0D\u5403\u9EB5\u5305"
   maxFallSpeed: 20
   minFallSpeed: 10
   maxScale: 2.5
   minScale: 0.1
   appearDuration: 1
   initialY: 0
+  explosionEffectPrefab: {fileID: 7048261812161446345, guid: e0d70134580ebe04987685ae5d7787f7, type: 3}

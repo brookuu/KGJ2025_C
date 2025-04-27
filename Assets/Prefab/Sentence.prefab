@@ -100,3 +100,10 @@ MonoBehaviour:
   destroyKeywords:
   - "\u90A3\u6211\u4E0D\u505A\u4EBA\u5566"
   - DOCTER
+  maxFallSpeed: 20
+  minFallSpeed: 10
+  maxScale: 2.5
+  minScale: 0.1
+  appearDuration: 1
+  initialY: 0
+  explosionEffectPrefab: {fileID: 7048261812161446345, guid: e0d70134580ebe04987685ae5d7787f7, type: 3}
