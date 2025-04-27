@@ -2064,14 +2064,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4d360233d02e4547b51dee1fdcd0485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minScale: {x: 1, y: 1}
-  maxScale: {x: 3, y: 3}
+  minScale: {x: 1, y: 1, z: 1}
+  maxScale: {x: 3, y: 3, z: 3}
   detector: {fileID: 1395645310}
-  loudnessSensibility: 10
+  loudnessSensibility: 5
   threshold: 0.2
   image: {fileID: 1681456563}
-  superBulletPrefab: {fileID: 0}
-  bulletArea: {fileID: 0}
+  superBulletPrefab: {fileID: 4766963008871498066, guid: df135d7325a611a45b0e3eff0dd0c3c3, type: 3}
+  bulletArea: {fileID: 1766234606}
+  cooldownTime: 10
 --- !u!114 &1395645310
 MonoBehaviour:
   m_ObjectHideFlags: 0
