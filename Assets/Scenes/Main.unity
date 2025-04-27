@@ -1305,7 +1305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 703348879}
   page: {fileID: 1576032016}
-<<<<<<< HEAD
+HEAD
 --- !u!1 &748682712
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,13 +1464,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751177822}
   m_CullTransparentMesh: 1
-=======
---- !u!198 &904638174 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 2501295356485680535, guid: 2f631ef6c21739a41a9823b07c0cf36d, type: 3}
-  m_PrefabInstance: {fileID: 7441108895895074970}
-  m_PrefabAsset: {fileID: 0}
->>>>>>> 1.0
+
 --- !u!1 &968751858
 GameObject:
   m_ObjectHideFlags: 0
