@@ -104,3 +104,4 @@ MonoBehaviour:
   minScale: 0.1
   appearDuration: 1
   initialY: 0
+  explosionEffectPrefab: {fileID: 7048261812161446345, guid: e0d70134580ebe04987685ae5d7787f7, type: 3}

@@ -97,3 +97,10 @@ MonoBehaviour:
   fullText: "\u6211\u5011\u8207\u795E\u6709\u76F4\u63A5\u9023\u7D50\u7279\u5730\u4F86\u6B64\u964D\u4E0B\u6551\u8D16"
   destroyKeywords:
   - "\u5BE9\u5224\u5EAD"
+  maxFallSpeed: 20
+  minFallSpeed: 10
+  maxScale: 2.5
+  minScale: 0.1
+  appearDuration: 1
+  initialY: 0
+  explosionEffectPrefab: {fileID: 7048261812161446345, guid: e0d70134580ebe04987685ae5d7787f7, type: 3}
